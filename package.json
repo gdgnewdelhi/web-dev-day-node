@@ -1,0 +1,19 @@
+{
+  "name": "web-dev-day",
+  "version": "1.0.0",
+  "description": "GDG New Delhi's Web Developers Day",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdgnewdelhi/web-dev-day.git"
+  },
+  "author": "Team GDG",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gdgnewdelhi/web-dev-day/issues"
+  },
+  "homepage": "https://github.com/gdgnewdelhi/web-dev-day#readme"
+}
