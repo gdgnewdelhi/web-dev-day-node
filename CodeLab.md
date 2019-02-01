@@ -1,4 +1,4 @@
-### Link For Discussion/Doubts: 
+### Link For Discussion/Doubts: <Coming Soon! Just after the event>
 
 ## Steps for this CodeLab
 
