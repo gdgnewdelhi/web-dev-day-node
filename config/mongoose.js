@@ -2,7 +2,8 @@
 const mongoose = require('mongoose');
 
 // connect to a specific database running on localhost
-mongoose.connect('mongodb://localhost/gdgeventdb');
+// [TODO 1] add your DB uri
+mongoose.connect('<replace db uri here>');
 
 // get the database access from connection
 const db = mongoose.connection;

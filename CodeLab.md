@@ -10,7 +10,17 @@
 
 ### Install the following (use google!)
 - Node.js (version > 10)
-- MongoDB
+- DB
+  - Create an account with mLab (https://mlab.com)
+    - Verify your email
+    - On the dashboard, click on Create New
+    - Create a SANDBOX [Free] version DB, it's awesomely free!
+    - Choose any region
+    - Enter a name
+    - Complete the order
+    - Click on the db name to get the URI
+    - Also, add a user by clicking on the user tab on the same page, this user will be used to access the db
+  - OR Install MongoDB CE
 - VS Code (this will be our editor environment (IDE))
 
 ### Setup the project
@@ -19,6 +29,7 @@
 3. Start Terminal from Terminal > New Terminal (in main menu)
 4. In the Terminal, run `npm install` Now you have almost your libraries setup and the project is ready to be run
 5. You can check the list of libraries which have been installed in the file ==package.json==
+6. GOTO ==config/mongoose.js== and add your mLab db uri near [TODO 1], replacing <dbuser> and <dbpassword appropriately>
 
 
 ### Running our Express.js server!
