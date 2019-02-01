@@ -13,8 +13,15 @@ const registrationsController = require('../controllers/registrations_controller
 // [TODO 1] create a route for displaying the home page of events (it'll contain the form to create an event and list of events)
 
 
+// [TODO 2] create a route for receiving the data from new event form and send it to an action in the eventsController
 
 
+// [TODO 3] create a route for api of events list and map it to corresponding action from eventsController
+
+
+
+// [READ] route to show the details of an event, it has a variable part
+router.get('/api/events/:id', eventsController.eventDetailsApi);
 
 
 

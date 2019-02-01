@@ -3,17 +3,18 @@ const express = require('express');
 const app = express();
 const port = 8000;
 
-// [TODO 5] setup the connection with db by requiring it from config/mongoose.js
+// [TODO 4] setup the connection with db by requiring it from config/mongoose.js
 
 
 
 // [TODO 2] install ejs and set the template engine
 
 
-// [TODO 3] set the url parser for parsing 
+// [READ] This helps in parsing data which is submitted from a form in html
+app.use(express.urlencoded({ extended: false}));
 
 
-// [TODO 4] add middleware to use static files
+// [ASSIGNMENT] add middleware to use static files
 
 
 

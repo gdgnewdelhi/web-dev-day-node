@@ -1,0 +1,36 @@
+<!-- [READ] This is an ejs file which is parsed into an html file before being sent to the browser (this is where our template engine is used!) -->
+<html>
+    
+    <head>
+        <!-- [TODO 1] place the title here from the context being passed -->
+    </head>
+    <body>
+        
+        <h1>GDG Event Manager</h1>
+
+        <!-- [READ] this is a form which is used to submit the data for an event -->
+        
+        <div>
+            <!-- [TODO 2] add url to submit the form data -->
+            <form action="" method="POST">
+                <fieldset>
+                    <input type="text" name="title" placeholder="Event Name">
+                </fieldset>
+                <fieldset>
+                    <textarea name="description" placeholder="Event Description"></textarea>
+                </fieldset>
+                <fieldset>
+                    <input type="datetime-local" name="date">
+                </fieldset>
+                <input type="submit" value="Create Event">
+            </form>
+        </div>
+
+
+
+        <!-- [TODO 3] display the list of events here by looping on the data sent from MongoDB -->
+        
+    </body>
+
+
+</html>
