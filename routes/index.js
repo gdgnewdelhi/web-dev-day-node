@@ -23,6 +23,8 @@ const registrationsController = require('../controllers/registrations_controller
 // [READ] route to show the details of an event, it has a variable part
 router.get('/api/events/:id', eventsController.eventDetailsApi);
 
+// [READ] route to create a registration for an event
+router.post('/api/registrations/create/:event_id', registrationsController.createRegistrationApi);
 
 
 module.exports = router;

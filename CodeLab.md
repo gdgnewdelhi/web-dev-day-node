@@ -1,17 +1,19 @@
-### Steps for this CodeLab
+### Link For Discussion/Doubts: 
 
-## Pre-requisites
+## Steps for this CodeLab
+
+### Pre-requisites
 - HTML
 - CSS
 - JavaScript
 - A little familiarity with the Terminal/Powershee/Command Prompt
 
-## Install the following (use google!)
+### Install the following (use google!)
 - Node.js (version > 10)
 - MongoDB
 - VS Code (this will be our editor environment (IDE))
 
-## Setup the project
+### Setup the project
 1. Download the folder/repository (or clone it if you know git)
 2. Open the folder in VS Code using 'Open Folder' from File in the top main menu
 3. Start Terminal from Terminal > New Terminal (in main menu)
@@ -19,7 +21,7 @@
 5. You can check the list of libraries which have been installed in the file ==package.json==
 
 
-## Running our Express.js server!
+### Running our Express.js server!
 1. GOTO ==index.js==, Study the comments starting with [READ]
 2. In the Terminal, run `node index.js`
 3. You can kill the server with **ctrl + c**
@@ -27,7 +29,7 @@
 5. Now you can run the server with `nodemon index.js`, this will restart the server everytime the code changes in js files
 
 
-## Rendering our first page
+### Rendering our first page
 1. In the terminal, run `npm install ejs` to install our template engine (we'll come to what that is soon!)
 2. GOTO ==index.js==
 3. Replace [TODO 1] with
@@ -59,7 +61,7 @@
     This basically finds the file ==home.ejs== in folder ==views== and converts it to html and sends it back to the browser
 
 
-##  Using the controllers
+###  Using the controllers
 1. Since we've already created 2 controller files viz. ==controllers/events_controller.js== and ==controllers/registrations_controller.js==, we export some methods from them and use them in routes
 
 2. In the last coding step (previous section) in ==routes/index.js==, replace this part
@@ -82,7 +84,7 @@
 
 
 
-## Understanding mongoose connections and schema
+### Understanding mongoose connections and schema
 1. GOTO and explore ==config/mongoose.js==. It has used mongoose package to connect to MongoDB
 2. GOTO ==index.js== and replace [TODO 4] with
     ```
@@ -97,7 +99,7 @@
 6. Advantage of mongoose.js is that it is an ORM (a layer between express server and MongoDB) and makes our interaction with MongoDB (reading, writing, updating, deleting) quite easy without having to get into the details of learning the syntax for MongoDB.
 
 
-## Creating an event from the form
+### Creating an event from the form
 1. GOTO and explore the different HTML elements in ==views/home.ejs==
     The form has inputs and text areas for 3 fields for **title, description and date **
 
@@ -107,7 +109,13 @@
     ```
     (this will be the route or url to which we will be sending the data from the form)
 
-3. GOTO ==controllers/events_controller== and replace [TODO 3] with the following code, to receive data and create an event
+3. GOTO ==controllers/events_controller==, replace [TODO 2] with
+    ```
+    const Event = require('../models/event');
+    ```
+    This will import the schema for Event to be used to create and read events
+
+4. GOTO ==controllers/events_controller== and replace [TODO 3] with the following code, to receive data and create an event
     ```
     module.exports.createEvent = function(req, res){
         console.log(req.body);
@@ -128,15 +136,15 @@
     ```
     We have created and exported a function which will create an event using **create()** method given by mongoose. It is taking the first argument as the fields of the event and the second argument as the callback function which receives an error (if event could not be created) and the event (if it is created and saved in the db)
 
-4. GOTO ==routes/index.js== and replace [TODO 2] with
+5. GOTO ==routes/index.js== and replace [TODO 2] with
     ```
     router.post('/events/create', eventsController.createEvent);
     ```
     Here, '.post' is the HTTP method used to send data to the server when we need to create something/make some changes into the database
-5. Run and check if the event is getting created (it should print in the terminal where server is running)
+6. Run and check if the event is getting created (it should print in the terminal where server is running)
 
 
-## Using ejs now for listing events
+### Using ejs now for listing events
 1. GOTO ==controllers/events_controller.js== and replace the code inside action **home** with
     ```
     Event.find({}, function(err, events){
@@ -177,7 +185,7 @@
 
 
 
-## Creating an API for showing a list of events
+### Creating an API for showing a list of events
 1. An API is basically a medium of communication using JSON. When the code is divided into 2 parts, viz. Front End (examples: Android, Angular, iOS) and Back End (examples: Node.js/Python/Ruby server), the communication is done using APIs
 2. Front End holds the code for design (how the page looks)
 3. Back End holds the logic of sending data according to the user (example Indian users might see different news and USA users would see news relevant to them OR you and your neighbour might look a the same design of Facebook, but would see different feeds and friends list)
@@ -203,4 +211,9 @@
 7. Run and check if the API works
 
     
-## You can now find [ASSIGNMENT] tags in every file, try them on your own
+### You can now find [ASSIGNMENT] tags in every file, try them on your own
+ - Some links (look out for documentation in each)
+    - Mongoose: https://mongoosejs.com/
+    - Express.js: https://expressjs.com/
+    - Node.js: https://nodejs.org/en/
+    - MongoDB: https://www.mongodb.com/
