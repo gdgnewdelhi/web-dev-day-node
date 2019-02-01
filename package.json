@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/gdgnewdelhi/web-dev-day/issues"
   },
-  "homepage": "https://github.com/gdgnewdelhi/web-dev-day#readme"
+  "homepage": "https://github.com/gdgnewdelhi/web-dev-day#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.8"
+  }
 }
