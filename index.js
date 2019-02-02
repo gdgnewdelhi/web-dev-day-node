@@ -2,6 +2,9 @@
 const express = require('express');
 const app = express();
 const port = 8000;
+const cors = require('cors');
+
+app.use(cors());
 
 // [TODO 4] setup the connection with db by requiring it from config/mongoose.js
 
