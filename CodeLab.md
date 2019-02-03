@@ -6,7 +6,7 @@
 - HTML
 - CSS
 - JavaScript
-- A little familiarity with the Terminal/Powershee/Command Prompt
+- A little familiarity with the Terminal/Powershell/Command Prompt
 
 ### Install the following (use google!)
 - Node.js (version > 10)
