@@ -1,4 +1,4 @@
-### Link For Discussion/Doubts: <Coming Soon! Just after the event>
+### Link For Discussion/Doubts: [Discuss any doubts on this page](https://gdgnd.org/gdg-new-delhi/events/web-developer-days-1/session-discussions?speaker_resource=30)
 
 ## Steps for this CodeLab
 
@@ -208,12 +208,9 @@
                 if (err){
                     console.log('error in finding events');
                 }
-                return res.render('home', {
-                    events: events,
-                    title: "GDG Events Home"
-                })
+                return res.json(events);
             });
-       }
+        } 
     ```
 6. Finally, create a route for this action above. GOTO ==routes/index.js== and replace [TODO 3] with
     ```
