@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/gdgnewdelhi/web-dev-day#readme",
   "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
     "mongoose": "^5.4.8"
   }

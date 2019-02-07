@@ -3,6 +3,9 @@
     
     <head>
         <!-- [TODO 1] place the title here from the context being passed -->
+        <title>
+            <%= title %>
+        </title>
     </head>
     <body>
         
@@ -12,7 +15,7 @@
         
         <div>
             <!-- [TODO 2] add url to submit the form data -->
-            <form action="" method="POST">
+            <form action="/events/create" method="POST">
                 <fieldset>
                     <input type="text" name="title" placeholder="Event Name">
                 </fieldset>
@@ -29,6 +32,24 @@
 
 
         <!-- [TODO 3] display the list of events here by looping on the data sent from MongoDB -->
+        <div id="events-list-container">
+            <ul>
+                <% for (event of events){ %>
+                
+                    <li>
+                        <div>
+                            <h3><%= event.title %></h3>
+                            <% if (event.date){ %>
+                            <p><%= event.date.toLocaleString() %></p>
+                            <%}%>
+                            <%= event.registrations.length %> Registrations
+                            <p><%= event.description %></p>
+                        </div>
+                    </li>
+                    
+                <% } %>
+            </ul>
+        </div>
         
     </body>
 

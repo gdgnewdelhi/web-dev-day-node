@@ -7,10 +7,11 @@ const cors = require('cors');
 app.use(cors());
 
 // [TODO 4] setup the connection with db by requiring it from config/mongoose.js
-
+const db = require('./config/mongoose');
 
 
 // [TODO 2] install ejs and set the template engine
+app.set('view engine', 'ejs');
 
 
 // [READ] This helps in parsing data which is submitted from a form in html
@@ -22,6 +23,7 @@ app.use(express.urlencoded({ extended: false}));
 
 
 // [TODO 1] add middleware to use the router by requiring it from routes/index.js
+app.use('/', require('./routes/index'));
 
 
 

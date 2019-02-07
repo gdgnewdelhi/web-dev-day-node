@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 // connect to a specific database running on localhost
 // [TODO 1] add your DB uri
-mongoose.connect('<replace db uri here>');
+mongoose.connect('mongodb://gdgnd:gdgnd19@ds119755.mlab.com:19755/gdgndnodeangular');
 
 // get the database access from connection
 const db = mongoose.connection;
